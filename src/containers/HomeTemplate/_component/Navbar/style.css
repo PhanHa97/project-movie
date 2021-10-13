@@ -1,4 +1,64 @@
 .active {
-  background-color: #fff;
-  color: red !important;
+  color: #fb4226 !important;
+}
+
+.navbar {
+  box-shadow: #000000 0px 0px 15px 0px;
+}
+
+.navbar-brand img {
+  width: 60%;
+}
+
+.home-center {
+  position: absolute;
+  left: 40%;
+  top: 35%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0px 20px 0px 0px;
+  color: blue;
+}
+.about-center {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0px 20px 0px 0px;
+}
+.list-movie-center {
+  position: absolute;
+  left: 60%;
+  top: 35%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0px 20px 0px 0px;
+}
+.login {
+  position: absolute;
+  left: 95%;
+  top: 35%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0px 20px 0px 0px;
+}
+.logout {
+  position: absolute;
+  left: 88%;
+  top: 35%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0px 20px 0px 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-left: auto;
+  }
 }

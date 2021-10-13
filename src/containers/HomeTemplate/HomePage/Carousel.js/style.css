@@ -1,0 +1,17 @@
+.carousel-inner {
+  height: 400px;
+  width: 100%;
+}
+
+.carousel-indicators li.active {
+  width: 13px !important;
+  height: 13px !important;
+  border-radius: 50%;
+  background-color: #fb4226 !important;
+}
+.carousel-indicators li {
+  width: 13px !important;
+  height: 13px !important;
+  border-radius: 50%;
+  background-color: #d8d8d8 !important;
+}
