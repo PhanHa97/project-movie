@@ -21,7 +21,23 @@ const routesHome = [
     },
 ];
 
-const routesAdmin = [];
+const routesAdmin = [
+    {
+        exact: false,
+        path: "/admin",
+        component: Admin,
+    },
+    {
+        exact: false,
+        path: "/films",
+        component: Films,
+    }, {
+        exact: false,
+        path: "/addNew",
+        component: AddFilm,
+    },
+];
+
 
 
 function renderRoutesHome() {
@@ -37,4 +53,17 @@ function renderRoutesHome() {
     });
 }
 
-export { renderRoutesHome };
+function renderRouteAdmin() {
+    return routesAdmin.map((route, index) => {
+        return (
+            <Route
+                key={index}
+                exact={route.exact}
+                path={route.path}
+                component={route.component}
+            />
+        )
+    })
+}
+
+export { renderRoutesHome, renderRouteAdmin };
