@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-import "../../css/sidebar.css"
+import "../../../css/sidebar.css"
 export default class Sidebar extends Component {
     render() {
         return (
@@ -8,7 +8,7 @@ export default class Sidebar extends Component {
                 {/* Sidebar */}
                 <nav id="sidebar" >
                     <div className="sidebar-header text-center">
-                        <img className="w-75" src="./img/logo.jpg" />
+                        <img className="w-75" src="./img/HD.jpg" />
                     </div>
                     <ul className="list-unstyled components">
                         <NavLink exact activeClassName="active" className="nav-link" to="/user">

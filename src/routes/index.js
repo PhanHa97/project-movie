@@ -2,7 +2,9 @@ import AboutPage from "../containers/HomeTemplate/AboutPage";
 import ListMoviePage from "../containers/HomeTemplate/ListMoviePage";
 import HomePage from "./../containers/HomeTemplate/HomePage";
 import { Route } from "react-router-dom";
-
+import Films from "../containers/AdminTemplate/FilmManagementPage"
+import AddFilm from "../containers/AdminTemplate/AddFilmPage"
+import Admin from "../containers/AdminTemplate";
 const routesHome = [
     {
         exact: true,
@@ -22,11 +24,7 @@ const routesHome = [
 ];
 
 const routesAdmin = [
-    {
-        exact: false,
-        path: "/admin",
-        component: Admin,
-    },
+
     {
         exact: false,
         path: "/films",
@@ -56,7 +54,7 @@ function renderRoutesHome() {
 function renderRouteAdmin() {
     return routesAdmin.map((route, index) => {
         return (
-            <Route
+            <Admin
                 key={index}
                 exact={route.exact}
                 path={route.path}

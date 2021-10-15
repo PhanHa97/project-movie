@@ -1,21 +1,27 @@
 
 import React from 'react'
 import "./css/style.css"
-import Sidebar from './component/sidebar'
-export default function Admin() {
+import { Route } from 'react-router-dom'
+import Sidebar from './component/navigate/sidebar'
+export default function Admin(props) {
+    const { exact, path, component } = props
     return (
         <div className="container-fluid">
-            <div className="row general">
-                <div className="col-md-2 bg-success left">
-                    <div className="logoAdmin text-center mb-5">
-                        <img src="./img/logo.jpg" className="w-50" />
-                    </div>
-                    <div className="navigate">
-                        <Sidebar />
-                    </div>
+            <div className="row row-general">
+                <div className="col-md-2 adminLeft ">
+
+                    <Sidebar />
                 </div>
-                <div className="col-md-10 bg-warning" >
-                    Quyền
+                <div className="col-md-10 adminRight " >
+                    <div className="nav-logout" >
+                        <span className="text-a mr-5">A</span>
+                        <button className="btn btn-dark logout" >Đăng xuất</button>
+                    </div>
+                    <Route
+                        exact={exact}
+                        path={path}
+                        component={component}
+                    />
                 </div>
             </div>
         </div>
