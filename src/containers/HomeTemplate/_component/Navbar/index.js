@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import "./style.css"
 
-
-
-
 export default class Navbar extends Component {
     render() {
         return (
@@ -13,7 +10,7 @@ export default class Navbar extends Component {
                     <Link className="navbar-brand " to="/">
                         <img src="./img/movie-04.png" alt="" />
                     </Link>
-                    <button className="navbar-toggler" onClick="openNav()">
+                    <button className="navbar-toggler">
                         <span className="navbar-toggler-icon" />
                     </button>
 
