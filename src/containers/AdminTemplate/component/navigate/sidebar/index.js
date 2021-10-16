@@ -8,26 +8,23 @@ export default class Sidebar extends Component {
                 {/* Sidebar */}
                 <nav id="sidebar" >
                     <div className="sidebar-header text-center">
-                        <img className="w-75" src="./img/HD.jpg" />
+                        <img className="w-75" src="./img/logoCyber.png" />
                     </div>
                     <ul className="list-unstyled components">
                         <NavLink exact activeClassName="active" className="nav-link" to="/user">
                             Users
                         </NavLink>
                         <li className="active">
-                            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">Films</a>
+                            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle pl-3">Films</a>
                             <ul className="collapse list-unstyled" id="homeSubmenu">
-                                <NavLink exact activeClassName="active" className="nav-link" to="/films">
+                                <NavLink exact activeClassName="active" className="nav-link " to="/films">
                                     Films
                                 </NavLink>
                                 <NavLink exact activeClassName="active" className="nav-link" to="/addNew">
                                     Add New
                                 </NavLink>
-
                             </ul>
                         </li>
-
-
                         <NavLink exact activeClassName="active" className="nav-link " to="/Showtime">
                             Showtime
                         </NavLink>

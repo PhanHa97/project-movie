@@ -9,7 +9,6 @@ export default function Admin(props) {
         <div className="container-fluid">
             <div className="row row-general">
                 <div className="col-md-2 adminLeft ">
-
                     <Sidebar />
                 </div>
                 <div className="col-md-10 adminRight " >
@@ -17,11 +16,13 @@ export default function Admin(props) {
                         <span className="text-a mr-5">A</span>
                         <button className="btn btn-dark logout" >Đăng xuất</button>
                     </div>
-                    <Route
-                        exact={exact}
-                        path={path}
-                        component={component}
-                    />
+                    <div>
+                        <Route
+                            exact={exact}
+                            path={path}
+                            component={component}
+                        />
+                    </div>
                 </div>
             </div>
         </div>
