@@ -1,17 +1,11 @@
 import axios from "axios";
 import { DOMAIN, TOKEN } from "../../util/settings/config";
 import { SET_CAROUSEL } from "./types/CarouselType";
+import { quanLyPhimService } from "../../services/QuanLyPhimService";
 
 export const getCarouselAction = async (dispatch) => {
   try {
-    const result = await axios({
-      url: `${DOMAIN}/api/QuanLyPhim/LayDanhSachBanner`,
-      method: "GET",
-      headers: {
-        TokenCybersoft: `${TOKEN}`,
-      },
-    });
-    // Đưa lên reducer
+    const result = await quanLyPhimService.layDanhSachBanner();
     dispatch({
       type: SET_CAROUSEL,
       arrImg: result.data.content,
