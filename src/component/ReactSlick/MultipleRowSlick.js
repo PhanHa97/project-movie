@@ -4,71 +4,42 @@ import {LeftOutlined, RightOutlined} from "@ant-design/icons";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import "./style.css";
+import Film from "../Film/Film"
+export default class MultipleRowsSlick extends Component {
 
-export default class MultipleRows extends Component {
+renderFilm = () => {
+  return this.props.arrFilm.map((item,index)=>{
+    return  (
+      <div key={index} className="width-item">
+        <Film />
+      </div>
+    )
+  })
+}
+
   render() {
     const settings = {
-      className: "center",
+      className: "center variable-width ",
       centerMode: true,
       infinite: true,
       centerPadding: "60px",
       slidesToShow: 3,
       speed: 500,
-      rows: 2,
-      slidesPerRow: 2
+      rows: 1,
+      slidesPerRow: 2,
+      variableWidth: true
     };
     return (
       <div>
         <h2>Multiple Rows</h2>
         <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-          <div>
-            <h3>7</h3>
-          </div>
-          <div>
-            <h3>8</h3>
-          </div>
-          <div>
-            <h3>9</h3>
-          </div>
-          <div>
-            <h3>10</h3>
-          </div>
-          <div>
-            <h3>11</h3>
-          </div>
-          <div>
-            <h3>12</h3>
-          </div>
-          <div>
-            <h3>13</h3>
-          </div>
-          <div>
-            <h3>14</h3>
-          </div>
-          <div>
-            <h3>15</h3>
-          </div>
-          <div>
-            <h3>16</h3>
-          </div>
+          {this.renderFilm()}
+          {this.renderFilm()}
+          {this.renderFilm()}
+          {this.renderFilm()}
+          {this.renderFilm()}
+          {this.renderFilm()}
+          {this.renderFilm()}
         </Slider>
       </div>
     );

@@ -9,12 +9,6 @@ export default class HomePage extends Component {
         return (
             <div>
                 <HomeCarousel />
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
                 <ListMovieHome />
                 <MenuHome />
             </div>
