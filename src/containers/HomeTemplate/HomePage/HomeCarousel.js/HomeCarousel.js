@@ -3,6 +3,7 @@ import { Carousel } from "antd";
 import { useSelector,useDispatch } from "react-redux";
 import axios from "axios";
 import { getCarouselAction } from "../../../../redux/actions/CarouselAction";
+import "./style.css";
 
 export default function HomeCarousel(props) {
   const { arrImg } = useSelector((state) => state.CarouselReducer);
@@ -42,7 +43,10 @@ export default function HomeCarousel(props) {
 
   return (
     <div>
-      <Carousel autoplay>{renderImg()}</Carousel>
+      {/* autoplay */}
+      <Carousel >
+        {renderImg()}
+      </Carousel>
     </div>
   );
 }
