@@ -33,7 +33,7 @@ export default function HomeCarousel(props) {
             <img
               src={item.hinhAnh}
               alt={item.hinhAnh}
-              className="w-full h-full"
+              className="w-full "
             />
           </h3>
         </div>

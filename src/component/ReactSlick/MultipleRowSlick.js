@@ -11,7 +11,7 @@ renderFilm = () => {
   return this.props.arrFilm.map((item,index)=>{
     return  (
       <div key={index} className="width-item">
-        <Film />
+        <Film phim={item} />
       </div>
     )
   })
@@ -31,7 +31,6 @@ renderFilm = () => {
     };
     return (
       <div>
-        <h2>Multiple Rows</h2>
         <Slider {...settings}>
           {this.renderFilm()}
           {this.renderFilm()}
