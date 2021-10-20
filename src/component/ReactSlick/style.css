@@ -7,7 +7,6 @@
 .slick-dots li button:before {
   display: none !important;
 }
-
 .width-item {
     width: 100% !important;
   }
@@ -25,4 +24,11 @@
   .slick-next:before {
     font-size: 30px !important;
   }
-  
+  .active_Film {
+    background-color: #1f2937;
+    color: white;
+  }
+  .none_active_Film{
+    background-color: white;
+    color: gray;
+  }

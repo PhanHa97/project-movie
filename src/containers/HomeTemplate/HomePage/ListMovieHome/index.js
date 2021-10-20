@@ -5,10 +5,10 @@ import Film from "../../../../component/Film/Film";
 import MultipleRowsSlick from "../../../../component/ReactSlick/MultipleRowSlick";
 import { layDanhSachPhimAction } from "../../../../redux/actions/QuanLyPhimAction";
 
-export default function ListMovieHome() {
+export default function ListMovieHome(props) {
   const { arrFilm } = useSelector((state) => state.QuanLyPhimReducer);
-
   const dispatch = useDispatch();
+  console.log('propsHome',arrFilm);
 
   useEffect(()=>{
     const action  = layDanhSachPhimAction();
@@ -17,7 +17,6 @@ export default function ListMovieHome() {
 
   return (
     <div className="container">
-     
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
         <MultipleRowsSlick arrFilm={arrFilm} />
