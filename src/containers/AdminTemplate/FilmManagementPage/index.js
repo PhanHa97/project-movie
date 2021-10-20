@@ -1,8 +1,38 @@
+import { data } from 'jquery'
 import React, { Component } from 'react'
 import { FaSearch } from "react-icons/fa"
+import { connect } from 'react-redux'
 import "../css/style.css"
-export default class Films extends Component {
+
+import { fetchDataFilm } from './_Component/action'
+import Loader from '../component/Loader'
+class Films extends Component {
+    componentDidMount() {
+        this.props.fetchFilm()
+        const { data } = this.props
+        console.log(data)
+    }
+
+    renderFilm = () => {
+        const { data, loading } = this.props
+
+        if (loading) {
+            return <Loader />
+        }
+        return data.map((item, key) => {
+            return <tr className="row">
+                <td className="col-2">{item.maPhim}</td>
+                <td className="col-3" ><img className="w-25" src={item.hinhAnh} /></td>
+                <td className="col-2">{item.tenPhim}</td>
+                <td className="col-2">{item.biDanh}</td>
+                <td className="col-3"> <iframe className=" w-100 h-100 responsive-iframe" src={item.trailer} />
+                </td>
+            </tr>
+        })
+    }
+
     render() {
+
         return (
             <div className="header-filmPage mt-2 ">
                 <h1>Quản lý phim</h1>
@@ -13,37 +43,37 @@ export default class Films extends Component {
                         <span className="input-group-text" id="basic-addon2"><FaSearch /></span>
                     </div>
                 </div>
-                <table class="table">
+                <table className="table">
                     <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                        <tr className="row">
+                            <th className="col-2" scope="col">Mã phim</th>
+                            <th className="col-3" scope="col">Hình ảnh</th>
+                            <th className="col-2" scope="col">Tên phim</th>
+                            <th className="col-2" scope="col">Bí danh</th>
+                            <th className="col-3" scope="col">Trailer</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        {this.renderFilm()}
                     </tbody>
                 </table>
             </div>
         )
     }
 }
+const mapStateToProps = (state, ownProps) => {
+    return {
+        data: state.reducerRenderFilm.data,
+        loading: state.reducerRenderFilm.loading
+    }
+}
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        fetchFilm: () => {
+            dispatch(fetchDataFilm())
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Films)
+
+
