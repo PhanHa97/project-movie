@@ -13,7 +13,7 @@ export default function ListMovieHome(props) {
   useEffect(()=>{
     const action  = layDanhSachPhimAction();
     dispatch(action); // dispatch function từ redux-thunk
-  },[])
+  },)
 
   return (
     <div className="container">
