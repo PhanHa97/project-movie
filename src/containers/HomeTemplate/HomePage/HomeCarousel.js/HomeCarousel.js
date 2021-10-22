@@ -43,8 +43,8 @@ export default function HomeCarousel(props) {
 
   return (
     <div>
-      {/* autoplay */}
-      <Carousel >
+      
+      <Carousel autoplay >
         {renderImg()}
       </Carousel>
     </div>

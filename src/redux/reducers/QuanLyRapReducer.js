@@ -1,8 +1,8 @@
 import { SET_HE_THONG_RAP_CHIEU } from "../actions/types/QuanLyRapType"
-import layThongTinHeThongRap from "./data/layThongTinHeThongRap.json"
+import LayThongTinLichChieuHeThongRap from "./data/LayThongTinLichChieuHeThongRap.json"
 
 const stateDefault ={ 
-    heThongRapChieu: layThongTinHeThongRap,
+    heThongRapChieu: LayThongTinLichChieuHeThongRap,
 }
 
 export const QuanLyRapReducer = (state = stateDefault,action) => {
