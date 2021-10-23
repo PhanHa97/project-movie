@@ -1,6 +1,8 @@
 import AboutPage from "../containers/HomeTemplate/AboutPage";
 import ListMoviePage from "../containers/HomeTemplate/ListMoviePage";
 import HomePage from "./../containers/HomeTemplate/HomePage";
+import Login from "./../containers/HomeTemplate/HomePage/Login/Login"
+import Register from "./../containers/HomeTemplate/HomePage/Register"
 import { Route } from "react-router-dom";
 
 const routesHome = [
@@ -18,6 +20,16 @@ const routesHome = [
         exact: false,
         path: "/list-movie",
         component: ListMoviePage,
+    },
+    {
+        exact: false,
+        path: "/login",
+        component: Login,
+    },
+    {
+        exact: false,
+        path: "/register",
+        component: Register,
     },
 ];
 

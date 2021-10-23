@@ -18,7 +18,7 @@ export default function HomePage(props) {
     <div>
       <HomeCarousel />
       <ListMovieHome />
-      <MenuHome heThongRapChieu={heThongRapChieu} />
+      {/* <MenuHome heThongRapChieu={heThongRapChieu} /> */}
       <br />
       <br />
     </div>
