@@ -6,6 +6,7 @@ import "../css/style.css"
 
 import { fetchDataFilm } from './_Component/action'
 import Loader from '../component/Loader'
+import { Link } from 'react-router-dom'
 class Films extends Component {
     componentDidMount() {
         this.props.fetchFilm()
@@ -36,7 +37,9 @@ class Films extends Component {
         return (
             <div className="header-filmPage mt-2 ">
                 <h1>Quản lý phim</h1>
-                <button className="btn btn-success">Thêm phim</button>
+                <Link exact activeClassName="active" className="btn btn-success w-25 nav-link" to="/addNew">
+                    Add New
+                </Link>
                 <div className="input-group mb-3 mt-5 w-100">
                     <input type="text" className="form-control" placeholder="Nhập tên phim" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                     <div className="input-group-append">
@@ -57,7 +60,7 @@ class Films extends Component {
                         {this.renderFilm()}
                     </tbody>
                 </table>
-            </div>
+            </div >
         )
     }
 }

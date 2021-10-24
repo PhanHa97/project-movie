@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import "../../../css/sidebar.css"
+import "../css/style.css"
 export default class Sidebar extends Component {
     render() {
         return (
-            <div className="wrapper">
+            <div className="wrapper dashboard">
                 {/* Sidebar */}
                 <nav id="sidebar" >
                     <div className="sidebar-header text-center">

@@ -7,7 +7,6 @@ import Sidebar from "./containers/AdminTemplate/component/navigate/sidebar"
 function App() {
   return (
     <BrowserRouter >
-      <Navbar />
       <Switch>
         {renderRoutesHome()}
         {renderRouteAdmin()}

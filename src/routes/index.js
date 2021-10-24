@@ -3,7 +3,7 @@ import ListMoviePage from "../containers/HomeTemplate/ListMoviePage";
 import HomePage from "./../containers/HomeTemplate/HomePage";
 import { Route } from "react-router-dom";
 import Films from "../containers/AdminTemplate/FilmManagementPage"
-import AddFilm from "../containers/AdminTemplate/AddFilmPage"
+import { AddFilm } from "../containers/AdminTemplate/AddFilmPage";
 import Admin from "../containers/AdminTemplate";
 const routesHome = [
     {
