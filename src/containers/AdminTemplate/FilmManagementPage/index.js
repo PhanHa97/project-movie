@@ -35,7 +35,7 @@ class Films extends Component {
     render() {
 
         return (
-            <div className="header-filmPage mt-2 ">
+            <div className="header-filmPage m-3 bgAdd">
                 <h1>Quản lý phim</h1>
                 <Link exact activeClassName="active" className="btn btn-success w-25 nav-link" to="/addNew">
                     Add New

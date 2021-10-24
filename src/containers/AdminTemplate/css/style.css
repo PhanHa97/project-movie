@@ -10,6 +10,12 @@
   padding: 0 !important ;
   max-width: 15.666667% !important;
 }
+.bgAdd {
+  background-color: rgba(211, 207, 207, 0.1);
+  border-radius: 20px;
+  box-shadow: -1px 2px 5px 2px grey;
+  padding: 30px 0;
+}
 .adminRight {
   padding: 0 !important;
 }
@@ -26,15 +32,13 @@
   padding: 10px;
   border-radius: 50%;
 }
-.adminRight {
-}
+
 .nav-logout {
   text-align: right;
   margin-right: 30px;
   margin-top: 15px;
 }
 .header-filmPage {
-  border: 20px solid rgba(184, 184, 184, 0.3);
   min-height: 100vh;
   margin: 0 -17px 0;
   padding: 30px;

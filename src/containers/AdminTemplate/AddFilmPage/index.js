@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import moment from 'moment';
+import "../css/style.css"
 import { fetchData } from './_component/action';
 import {
     Form,
@@ -77,8 +78,8 @@ export const AddFilm = () => {
     };
 
     return (
-        <>
-            <Form
+        <div className="bgAdd">
+            <Form className="m-5  "
                 onSubmitCapture={formik.handleSubmit}
                 labelCol={{
                     span: 4,
@@ -94,7 +95,7 @@ export const AddFilm = () => {
                 onValuesChange={onFormLayoutChange}
                 size={componentSize}
             >
-                <h4>Thêm phim mới</h4>
+                <h4 className="btn btn-dark">Thêm phim mới</h4>
                 <Form.Item label="Form Size" name="size">
                     <Radio.Group>
                         <Radio.Button value="small">Small</Radio.Button>
@@ -130,10 +131,10 @@ export const AddFilm = () => {
                     <input type="file" onChange={handleChangeFile} />
                     <img style={{ width: 200, height: 150 }} src={imgSrc} accept="image/png,image/gif,image/jpeg" />
                 </Form.Item>
-                <Form.Item label="Button">
+                <Form.Item label="Tác vụ">
                     <button type="submit" className="btn btn-success">Thêm phim</button>
                 </Form.Item>
             </Form>
-        </>
+        </div>
     );
 };
