@@ -25,7 +25,11 @@ class Films extends Component {
                 <td className="col-2">{item.maPhim}</td>
                 <td className="col-3" ><img className="w-25" src={item.hinhAnh} /></td>
                 <td className="col-2">{item.tenPhim}</td>
-                <td className="col-2">{item.biDanh}</td>
+                <td className="col-2">
+                    <button className="btn btn-success mr-2">Update</button>
+                    <button className="btn btn-warning ">Delete</button>
+
+                </td>
                 <td className="col-3"> <iframe className=" w-100 h-100 responsive-iframe" src={item.trailer} />
                 </td>
             </tr>

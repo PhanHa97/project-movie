@@ -7,7 +7,7 @@ const inititalState = {
     error: null
 }
 
-export const reducerPostFilm = (state = inititalState, action) => {
+export const reducerAddNew = (state = inititalState, action) => {
     switch (action.type) {
         case ActionType.AddNewRequest:
             state.loading = true;

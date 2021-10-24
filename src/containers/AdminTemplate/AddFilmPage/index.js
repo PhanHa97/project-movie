@@ -24,6 +24,7 @@ export const AddFilm = () => {
     const dispatch = useDispatch();
     const formik = useFormik({
         initialValues: {
+            maPhim: 0,
             tenPhim: "",
             trailer: "",
             moTa: "",
@@ -40,15 +41,14 @@ export const AddFilm = () => {
             let formData = new FormData;
             for (let key in values) {
                 if (key !== "hinhAnh") {
-
                     formData.append(key, values[key]);
                 } else {
                     formData.append("File", values.hinhAnh, values.hinhAnh.name);
                 }
             }
-
             dispatch(fetchData(formData))
         }
+
     })
     const handleChangeDate = (value) => {
         formik.setFieldValue("ngayKhoiChieu", moment(value).format("DD/MM/YYYY"))
