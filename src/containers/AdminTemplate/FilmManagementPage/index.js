@@ -27,7 +27,7 @@ class Films extends Component {
                 <td className="col-2">{item.tenPhim}</td>
                 <td className="col-2">
 
-                    <NavLink className="btn btn-success" to={`/films/edit/${item.maPhim}`}>Update</NavLink>
+                    <NavLink className="btn btn-success" to={`edit/${item.maPhim}`}>Update</NavLink>
                     <button className="btn btn-warning ">Delete</button>
 
 

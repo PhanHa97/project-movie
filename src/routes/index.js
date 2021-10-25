@@ -5,7 +5,7 @@ import { Route } from "react-router-dom";
 import Films from "../containers/AdminTemplate/FilmManagementPage"
 import { AddFilm } from "../containers/AdminTemplate/AddFilmPage";
 import Admin from "../containers/AdminTemplate";
-import Edit from "../containers/AdminTemplate/Edit";
+import { Edit } from "../containers/AdminTemplate/Edit";
 const routesHome = [
     {
         exact: true,
@@ -36,7 +36,7 @@ const routesAdmin = [
         component: AddFilm,
     }, {
         exact: false,
-        path: "/films/edit/:{id}",
+        path: "/edit/:id",
         component: Edit,
     }
 ];
