@@ -10,14 +10,34 @@
   padding: 0 !important ;
   max-width: 15.666667% !important;
 }
+label {
+  color: white;
+}
 .bgAdd {
-  background-color: rgba(211, 207, 207, 0.1);
+  /* background-color: rgba(211, 207, 207, 0.1); */
+  background-image: url("./bgAdd.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: -1px 2px 5px 2px grey;
+  padding: 30px 0;
+}
+.bgAdd1 {
+  /* background-color: rgba(211, 207, 207, 0.1); */
+  background: linear-gradient(to right, #4d153c, #b30f40);
   border-radius: 20px;
   box-shadow: -1px 2px 5px 2px grey;
   padding: 30px 0;
 }
 .adminRight {
-  padding: 0 !important;
+  padding-bottom: 50px;
+  padding-right: 80px;
+}
+.ant-form-item-label > label {
+  color: white !important;
+  font-size: 20px !important;
+  font-weight: 600;
 }
 */ .textFilm {
   color: black;

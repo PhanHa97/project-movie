@@ -43,7 +43,9 @@ export const AddFilm = () => {
                 if (key !== "hinhAnh") {
                     formData.append(key, values[key]);
                 } else {
-                    formData.append("File", values.hinhAnh, values.hinhAnh.name);
+                    const blob = new Blob([JSON.stringify(values.hinhAnh, null, 2)], { type: 'application/json' });
+                    console.log(blob)
+                    formData.append("File", blob, values.hinhAnh.name);
                 }
             }
             dispatch(fetchData(formData))
@@ -79,7 +81,7 @@ export const AddFilm = () => {
 
     return (
         <div className="bgAdd">
-            <Form className="m-5  "
+            <Form className="m-5 "
                 onSubmitCapture={formik.handleSubmit}
                 labelCol={{
                     span: 4,

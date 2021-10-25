@@ -11,12 +11,12 @@ export default function Admin(props) {
                 <div className="col-md-2 adminLeft">
                     <Sidebar />
                 </div>
-                <div className="col-md-10" >
+                <div className="col-md-10 " >
                     <div className="nav-logout mb-5" >
 
-                        <button className="btn btn-dark logout" >Đăng xuất</button>
+                        <button className="btn btn-dark logout p-3" style={{ fontSize: "25px", borderRadius: "20px" }} >Đăng xuất</button>
                     </div>
-                    <div>
+                    <div className="adminRight">
                         <Route
                             exact={exact}
                             path={path}

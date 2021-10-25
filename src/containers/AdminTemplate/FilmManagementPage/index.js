@@ -6,7 +6,7 @@ import "../css/style.css"
 
 import { fetchDataFilm } from './_Component/action'
 import Loader from '../component/Loader'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 class Films extends Component {
     componentDidMount() {
         this.props.fetchFilm()
@@ -21,50 +21,55 @@ class Films extends Component {
             return <Loader />
         }
         return data.map((item, key) => {
-            return <tr className="row">
-                <td className="col-2">{item.maPhim}</td>
+            return <tr className="row text-light" style={{ fontSize: "18px" }}>
+                <td className="col-2 text-light">{item.maPhim}</td>
                 <td className="col-3" ><img className="w-25" src={item.hinhAnh} /></td>
                 <td className="col-2">{item.tenPhim}</td>
                 <td className="col-2">
-                    <button className="btn btn-success mr-2">Update</button>
+
+                    <NavLink className="btn btn-success" to={`/films/edit/${item.maPhim}`}>Update</NavLink>
                     <button className="btn btn-warning ">Delete</button>
+
+
 
                 </td>
                 <td className="col-3"> <iframe className=" w-100 h-100 responsive-iframe" src={item.trailer} />
                 </td>
-            </tr>
+            </tr >
         })
     }
 
     render() {
 
         return (
-            <div className="header-filmPage m-3 bgAdd">
-                <h1>Quản lý phim</h1>
-                <Link exact activeClassName="active" className="btn btn-success w-25 nav-link" to="/addNew">
-                    Add New
-                </Link>
-                <div className="input-group mb-3 mt-5 w-100">
-                    <input type="text" className="form-control" placeholder="Nhập tên phim" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                    <div className="input-group-append">
-                        <span className="input-group-text" id="basic-addon2"><FaSearch /></span>
+            <div className="bgAdd1 w-100">
+                <div className="header-filmPage m-5  ">
+                    <h1 className="text-light">Quản lý phim</h1>
+                    <Link exact activeClassName="active" className="btn btn-success w-25 nav-link" to="/addNew">
+                        Add New
+                    </Link>
+                    <div className="input-group mb-3 mt-5 w-100">
+                        <input type="text" className="form-control" placeholder="Nhập tên phim" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                        <div className="input-group-append">
+                            <span className="input-group-text" id="basic-addon2"><FaSearch /></span>
+                        </div>
                     </div>
-                </div>
-                <table className="table">
-                    <thead>
-                        <tr className="row">
-                            <th className="col-2" scope="col">Mã phim</th>
-                            <th className="col-3" scope="col">Hình ảnh</th>
-                            <th className="col-2" scope="col">Tên phim</th>
-                            <th className="col-2" scope="col">Bí danh</th>
-                            <th className="col-3" scope="col">Trailer</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.renderFilm()}
-                    </tbody>
-                </table>
-            </div >
+                    <table className="table">
+                        <thead>
+                            <tr className="row text-light" style={{ fontSize: "20px" }} >
+                                <th className="col-2" scope="col">Mã phim</th>
+                                <th className="col-3" scope="col">Hình ảnh</th>
+                                <th className="col-2" scope="col">Tên phim</th>
+                                <th className="col-2" scope="col">Bí danh</th>
+                                <th className="col-3" scope="col">Trailer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.renderFilm()}
+                        </tbody>
+                    </table>
+                </div >
+            </div>
         )
     }
 }
