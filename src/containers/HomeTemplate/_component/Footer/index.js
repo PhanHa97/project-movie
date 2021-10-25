@@ -12,7 +12,7 @@ export default function Footer (props) {
 
     return (
         <section className>
-            <footer className="footer text-white">
+            <footer className="footer text-white ">
                 <div className="container p-4">
                     <div className="row">
                         <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
