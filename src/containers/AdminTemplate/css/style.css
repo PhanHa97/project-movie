@@ -13,6 +13,18 @@
 label {
   color: white;
 }
+.btnAddnew {
+  background: #b30f40;
+  width: 200px;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.btnAddnew:hover {
+  background: #83072e;
+  color: red;
+}
 .bgAdd {
   /* background-color: rgba(211, 207, 207, 0.1); */
   background-image: url("./bgAdd.jpg");
@@ -52,7 +64,25 @@ label {
   padding: 10px;
   border-radius: 50%;
 }
-
+.logout {
+  background: linear-gradient(to right, #4d153c, #f5185b) right;
+  /* background-size: 200px;
+  transition: 10s ease-out;
+  border: none; */
+  font-size: 12px;
+  /* background: linear-gradient(to right, darkblue, darkorange) right; */
+  padding: 0 15px;
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 30px;
+  background-size: 300px;
+  transition: 0.5s ease-out;
+}
+.logout:hover {
+  background-position: left;
+}
 .nav-logout {
   text-align: right;
   margin-right: 30px;

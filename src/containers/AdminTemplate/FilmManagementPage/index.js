@@ -45,7 +45,7 @@ class Films extends Component {
             <div className="bgAdd1 w-100">
                 <div className="header-filmPage m-5  ">
                     <h1 className="text-light">Quản lý phim</h1>
-                    <Link exact activeClassName="active" className="btn btn-success w-25 nav-link" to="/addNew">
+                    <Link exact activeClassName="active" className="btnAddnew  nav-link" to="/addNew">
                         Add New
                     </Link>
                     <div className="input-group mb-3 mt-5 w-100">

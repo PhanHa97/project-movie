@@ -14,7 +14,7 @@ export default function Admin(props) {
                 <div className="col-md-10 " >
                     <div className="nav-logout mb-5" >
 
-                        <button className="btn btn-dark logout p-3" style={{ fontSize: "25px", borderRadius: "20px" }} >Đăng xuất</button>
+                        <button className=" logout p-3" style={{ fontSize: "25px" }} >Đăng xuất</button>
                     </div>
                     <div className="adminRight">
                         <Route

@@ -62,9 +62,12 @@ p {
 a,
 a:hover,
 a:focus {
-  color: inherit;
   text-decoration: none;
   transition: all 0.3s;
+}
+.dashboard a:hover {
+  background: linear-gradient(to right, #4d153c, #f5185b) right;
+  color: white !important;
 }
 
 #sidebar {
@@ -93,16 +96,17 @@ a:focus {
   display: block;
 }
 #sidebar ul li a:hover {
-  background: black;
+  background: linear-gradient(to right, #4d153c, #f5185b) right;
 }
 
 #sidebar ul li.active > a,
 a[aria-expanded="true"] {
   color: white;
-  background: navy;
+  background: linear-gradient(to right, #4d153c, #f5185b) right;
 }
 ul ul a {
-  font-size: 20px !important;
+  font-size: 25px !important;
   padding-left: 30px !important;
-  background: navy;
+  background: black;
+  font-weight: 600;
 }
