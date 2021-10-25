@@ -3,7 +3,6 @@ import { Tabs, Radio, Space } from "antd";
 
 const { TabPane } = Tabs;
 export default class MenuHome extends Component {
-
   state = {
     tabPosition: "left",
   };
@@ -12,13 +11,10 @@ export default class MenuHome extends Component {
     this.setState({ tabPosition: e.target.value });
   };
 
-
-  componentDidMount(){
-    
-  }
+  componentDidMount() {}
 
   render() {
-    console.log(this.props,'props123');
+    console.log(this.props, "props123");
     const { tabPosition } = this.state;
     return (
       <div className="container">
@@ -36,10 +32,30 @@ export default class MenuHome extends Component {
           >
             Content of Tab 1
           </TabPane>
-          <TabPane tab="Tab 2" key="2">
+          <TabPane
+            tab={
+              <img
+                src="https://picsum.photos/200"
+                alt=""
+                className="rounded-full"
+                width="50"
+              />
+            }
+            key="2"
+          >
             Content of Tab 2
           </TabPane>
-          <TabPane tab="Tab 3" key="3">
+          <TabPane
+            tab={
+              <img
+                src="https://picsum.photos/200"
+                alt=""
+                className="rounded-full"
+                width="50"
+              />
+            }
+            key="3"
+          >
             Content of Tab 3
           </TabPane>
         </Tabs>
