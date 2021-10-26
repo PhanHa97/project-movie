@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { layDanhSachHeThongRapACtion } from "../../../redux/actions/QuanLyRapAction.js";
+import Navbar from "../_component/Navbar/index.js";
+import Footer from "../_component/Footer/index";
 import HomeCarousel from "./HomeCarousel.js/HomeCarousel.js";
 
 import ListMovieHome from "./ListMovieHome/index.js";
@@ -16,11 +18,13 @@ export default function HomePage(props) {
 
   return (
     <div>
+      <Navbar/>
       <HomeCarousel />
       <ListMovieHome />
       <MenuHome heThongRapChieu={heThongRapChieu} />
       <br />
       <br />
+      <Footer />
     </div>
   );
 }
