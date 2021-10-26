@@ -97,7 +97,7 @@ export const AddFilm = () => {
                 onValuesChange={onFormLayoutChange}
                 size={componentSize}
             >
-                <h4 className="btn btn-dark logout">Thêm phim mới</h4>
+                <h4 className="btn btn-dark logout1">Thêm phim mới</h4>
                 <Form.Item label="Form Size" name="size">
                     <Radio.Group>
                         <Radio.Button value="small">Small</Radio.Button>

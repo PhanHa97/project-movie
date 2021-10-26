@@ -63,7 +63,7 @@ label {
   padding: 10px;
   border-radius: 50%;
 }
-.logout {
+.logout1 {
   background: linear-gradient(to right, #4d153c, #f5185b) right;
   /* background-size: 200px;
   transition: 10s ease-out;
@@ -79,7 +79,7 @@ label {
   background-size: 300px;
   transition: 0.5s ease-out;
 }
-.logout:hover {
+.nav-logout .logout1:hover {
   background-position: left;
 }
 .nav-logout {
