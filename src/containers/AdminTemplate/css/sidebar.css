@@ -10,8 +10,7 @@
 }
 
 .active {
-  background-color: black !important ;
-  color: red !important;
+  color: #fb4226 !important;
 }
 .nav-link {
   color: white;
