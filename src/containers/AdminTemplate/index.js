@@ -13,7 +13,6 @@ export default function Admin(props) {
                 </div>
                 <div className="col-md-10 " >
                     <div className="nav-logout mb-5" >
-
                         <button className=" logout p-3" style={{ fontSize: "25px" }} >Đăng xuất</button>
                     </div>
                     <div className="adminRight">
