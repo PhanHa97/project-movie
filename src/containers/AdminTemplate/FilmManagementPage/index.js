@@ -10,8 +10,7 @@ import { Link, NavLink } from 'react-router-dom'
 class Films extends Component {
     componentDidMount() {
         this.props.fetchFilm()
-        const { data } = this.props
-        console.log(data)
+
     }
 
     renderFilm = () => {
@@ -21,7 +20,7 @@ class Films extends Component {
             return <Loader />
         }
         return data.map((item, key) => {
-            return <tr className="row text-light" style={{ fontSize: "18px" }}>
+            return <tr key={item.maPhim} className="row text-light" style={{ fontSize: "18px" }}>
                 <td className="col-2 text-light">{item.maPhim}</td>
                 <td className="col-3" ><img className="w-25" src={item.hinhAnh} /></td>
                 <td className="col-2">{item.tenPhim}</td>

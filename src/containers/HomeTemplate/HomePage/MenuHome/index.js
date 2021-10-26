@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Tabs, Radio, Space } from "antd";
+import { Tabs } from "antd";
 
 const { TabPane } = Tabs;
 export default class MenuHome extends Component {
@@ -11,7 +11,7 @@ export default class MenuHome extends Component {
     this.setState({ tabPosition: e.target.value });
   };
 
-  componentDidMount() {}
+  componentDidMount() { }
 
   render() {
     console.log(this.props, "props123");

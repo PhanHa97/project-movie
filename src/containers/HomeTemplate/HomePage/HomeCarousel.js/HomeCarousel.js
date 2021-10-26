@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Carousel } from "antd";
-import { useSelector,useDispatch } from "react-redux";
-import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
 import { getCarouselAction } from "../../../../redux/actions/CarouselAction";
 import "./style.css";
 
@@ -11,7 +10,7 @@ export default function HomeCarousel(props) {
   const dispatch = useDispatch();
 
   // sẽ tự kích hoạt khi component load ra
-  useEffect( () => {
+  useEffect(() => {
 
     dispatch(getCarouselAction);
 
@@ -43,7 +42,7 @@ export default function HomeCarousel(props) {
 
   return (
     <div>
-      
+
       <Carousel autoplay >
         {renderImg()}
       </Carousel>

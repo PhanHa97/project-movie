@@ -8,13 +8,12 @@ import { fetchUpdateFilm } from './component/action';
 import {
     Form,
     Input,
-    Button,
+
     Radio,
-    Select,
-    Cascader,
+
     DatePicker,
     InputNumber,
-    TreeSelect,
+
     Switch,
 } from 'antd';
 import { useDispatch } from 'react-redux';
