@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* /* .row-general {
+  margin: 0px !important;
+} */
+.adminLeft {
+  padding: 0 !important ;
+  max-width: 15.666667% !important;
+}
+label {
+  color: white;
+}
+.btnAddnew {
+  background: #b30f40;
+  width: 200px;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.btnAddnew:hover {
+  background: #83072e;
+  color: red;
+}
+.bgAdd {
+  /* background-color: rgba(211, 207, 207, 0.1); */
+  background-image: url("./bgAdd.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: -1px 2px 5px 2px grey;
+  padding: 30px 0;
+}
+.bgAdd1 {
+  /* background-color: rgba(211, 207, 207, 0.1); */
+  background: linear-gradient(to right, #4d153c, #b30f40);
+  border-radius: 20px;
+  box-shadow: -1px 2px 5px 2px grey;
+  padding: 30px 0;
+}
+.adminRight {
+  padding-bottom: 50px;
+  padding-right: 80px;
+}
+.ant-form-item-label > label {
+  color: white !important;
+  font-size: 20px !important;
+  font-weight: 600;
+}
+*/ .textFilm {
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+}
+.text-a {
+  font-size: 15px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 50%;
+}
+.logout {
+  background: linear-gradient(to right, #4d153c, #f5185b) right;
+  /* background-size: 200px;
+  transition: 10s ease-out;
+  border: none; */
+  font-size: 12px;
+  /* background: linear-gradient(to right, darkblue, darkorange) right; */
+  padding: 0 15px;
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 30px;
+  background-size: 300px;
+  transition: 0.5s ease-out;
+}
+.logout:hover {
+  background-position: left;
+}
+.nav-logout {
+  text-align: right;
+  margin-right: 30px;
+  margin-top: 15px;
+}
+.header-filmPage {
+  min-height: 100vh;
+  margin: 0 -17px 0;
+  padding: 30px;
+}
+
+/* checkbox
+ */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

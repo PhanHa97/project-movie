@@ -4,7 +4,10 @@ import HomePage from "./../containers/HomeTemplate/HomePage";
 import Login from "./../containers/HomeTemplate/HomePage/Login/Login"
 import Register from "./../containers/HomeTemplate/HomePage/Register"
 import { Route } from "react-router-dom";
-
+import Films from "../containers/AdminTemplate/FilmManagementPage"
+import { AddFilm } from "../containers/AdminTemplate/AddFilmPage";
+import Admin from "../containers/AdminTemplate";
+import { Edit } from "../containers/AdminTemplate/Edit";
 const routesHome = [
     {
         exact: true,
@@ -33,7 +36,23 @@ const routesHome = [
     },
 ];
 
-const routesAdmin = [];
+const routesAdmin = [
+
+    {
+        exact: true,
+        path: "/films",
+        component: Films,
+    }, {
+        exact: false,
+        path: "/addNew",
+        component: AddFilm,
+    }, {
+        exact: false,
+        path: "/edit/:id",
+        component: Edit,
+    }
+];
+
 
 
 function renderRoutesHome() {
@@ -49,4 +68,17 @@ function renderRoutesHome() {
     });
 }
 
-export { renderRoutesHome };
+function renderRouteAdmin() {
+    return routesAdmin.map((route, index) => {
+        return (
+            <Admin
+                key={index}
+                exact={route.exact}
+                path={route.path}
+                component={route.component}
+            />
+        )
+    })
+}
+
+export { renderRoutesHome, renderRouteAdmin };
