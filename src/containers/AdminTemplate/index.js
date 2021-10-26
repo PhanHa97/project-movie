@@ -31,27 +31,3 @@ export default function Admin(props) {
 
 
 
-// export default class Admin extends Component {
-
-//     render() {
-
-//         return (
-//             <div className="container-fluid">
-//                 <div className="row">
-//                     <div className="col-md-2 bg-success">
-//                         <div className="logoAdmin text-center">
-//                             <img src="./img/logo.jpg" className="w-50" />
-//                         </div>
-//                         <div className="navigate">
-//                             {NestedList()}
-//                         </div>
-//                     </div>
-//                     <div className="col-md-10 bg-warning" >
-//                         Quyền
-//                     </div>
-
-//                 </div>
-//             </div>
-//         )
-//     }
-// }
