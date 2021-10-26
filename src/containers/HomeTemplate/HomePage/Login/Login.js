@@ -1,6 +1,8 @@
 import React from "react";
 import { useFormik } from "formik";
 import { Link } from "react-router-dom";
+import Navbar from "../../_component/Navbar";
+import Footer from "../../_component/Footer";
 
 export default function Login(props) {
   const formik = useFormik({
@@ -14,6 +16,8 @@ export default function Login(props) {
   });
 
   return (
+    <div>
+      <Navbar/>
     <div className="lg:flex py-6">
       <formik 
         onSubmit={formik.handleSubmit}
@@ -246,6 +250,8 @@ export default function Login(props) {
           </svg>
         </div>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 }

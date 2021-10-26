@@ -19,7 +19,7 @@ export default class Navbar extends Component {
               <li className="nav-item home-center">
                 <NavLink
                   exact
-                  activeClassName="active"
+                  activeClassName="active-header"
                   className="nav-link "
                   to="/"
                 >
@@ -28,7 +28,7 @@ export default class Navbar extends Component {
               </li>
               <li className="nav-item">
                 <NavLink
-                  activeClassName="active"
+                  activeClassName="active-header"
                   className="nav-link about-center"
                   to="/about"
                 >
@@ -37,7 +37,7 @@ export default class Navbar extends Component {
               </li>
               <li className="nav-item">
                 <NavLink
-                  activeClassName="active"
+                  activeClassName="active-header"
                   className="nav-link list-movie-center"
                   to="/list-movie"
                 >
